@@ -259,7 +259,7 @@ __nef_version__ = '.'.join((MAJOR_VERSION, MINOR_VERSION))
 # __version__ = '.'.join( (__nef_version__, PATCH_LEVEL) )
 
 from . import NEF_ROOT_PATH
-NEF_DEFAULT_DICT = os.path.join(NEF_ROOT_PATH, 'mmcif_nef_v1_1.dic')
+NEF_DEFAULT_DICT = os.path.join(NEF_ROOT_PATH, '../../mmcif_nef_v1_1.dic')
 
 NEF_CATEGORIES = [('nef_nmr_meta_data', 'get_nmr_meta_data'),
                   ('nef_molecular_system', 'get_molecular_systems'),

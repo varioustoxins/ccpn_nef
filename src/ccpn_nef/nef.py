@@ -1150,9 +1150,10 @@ def verifyFile(file, options):
     :param options:
     :return:
     """
-    VALIDATEDICT = '/Users/ejb66/PycharmProjects/Git/NEF/specification/mmcif_nef.dic'
+    import os
+    VALIDATEDICT = os.path.join(os.path.dirname(__file__), '../../NEF/specification/mmcif_nef_v1_1.dic')
 
-    from ccpn.util.nef import NefImporter as Nef
+    from . import NefImporter as Nef
 
     # load the file and the validate dict
     _loader = Nef.NefImporter(errorLogging=Nef.el.NEF_STANDARD, hidePrefix=True)
