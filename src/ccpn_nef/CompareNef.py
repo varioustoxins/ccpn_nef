@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 compareNef - a series of routines to compare the contents of two Nef files
 

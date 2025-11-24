@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Functions to append a number to the end of a filename if it already exists
 """

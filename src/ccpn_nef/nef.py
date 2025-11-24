@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 nef - nef handling routines; a series of routines to compare/verify Nef files
 

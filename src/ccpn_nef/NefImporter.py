@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 NefImporter - a series of routines for reading a Nef file and examining the contents.
 
