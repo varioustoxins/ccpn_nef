@@ -131,10 +131,7 @@ nef.py contains the following routines:
   printCompareList      print the comparison list to the screen
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
 
 
 #=========================================================================================
