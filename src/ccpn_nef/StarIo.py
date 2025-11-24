@@ -27,10 +27,12 @@ and other STAR variants satisfying the following requirements:
 
   On reading tag prefixes ('_', 'save_', 'data_' are stripped,
   as are the parts of tags before the first '.'
-# -*- coding: utf-8 -*-
 """
 
-
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
 
 
 #=========================================================================================
