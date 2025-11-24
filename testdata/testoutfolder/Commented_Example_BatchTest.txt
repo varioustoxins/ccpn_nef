@@ -1,0 +1,80 @@
+ ./nef/testdata/testinfolder1/Commented_Example_BatchTest.nef
+ ./nef/testdata/testinfolder2/Commented_Example_BatchTest.nef
+Batch processing Commented_Example_BatchTest.nef > Commented_Example_BatchTest.txt
+./nef/testdata/testinfolder1/Commented_Example_BatchTest.nef
+./nef/testdata/testinfolder2/Commented_Example_BatchTest.nef
+
+Items that are only present in ./nef/testdata/testinfolder1/Commented_Example_BatchTest.nef:
+  Root:nef_my_nmr_project_1: contains --> nef_dihedral_restraint_list_L2
+  Root:nef_my_nmr_project_1:nef_rdc_restraint_list_3: contains --> restraint_origin
+  Root:nef_my_nmr_project_1:nef_rdc_restraint_list_3:nef_rdc_restraint: contains --> target_value_uncertainty
+                                                                                     upper_linear_limit
+                                                                                     target_value
+  Root:nef_my_nmr_project_1:nef_chemical_shift_list_1:nef_chemical_shift: contains --> chain_code
+                                                                                       sequence_code
+                                                                                       residue_type
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_dummy15d: contains --> experiment_classification
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_dummy15d:nef_spectrum_dimension: contains --> absolute_peak_positions
+                                                                                           spectrometer_frequency
+                                                                                           spectral_width
+                                                                                           folding
+                                                                                           value_first_point
+                                                                                           is_acquisition
+  Root:nef_my_nmr_project_1:nef_distance_restraint_list_L1: contains --> restraint_origin
+  Root:nef_my_nmr_project_1:nef_distance_restraint_list_L1:nef_distance_restraint: contains --> target_value
+                                                                                                target_value_uncertainty
+                                                                                                upper_linear_limit
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_cnoesy1: contains --> experiment_classification
+
+Items that are only present in ./nef/testdata/testinfolder2/Commented_Example_BatchTest.nef:
+  Root:nef_my_nmr_project_1: contains --> nef_dihedral_restraint_list_L3
+  Root:nef_my_nmr_project_1:nef_rdc_restraint_list_3: contains --> restraint_origin2
+  Root:nef_my_nmr_project_1:nef_rdc_restraint_list_3:nef_rdc_restraint: contains --> upper_linear_limitnew
+                                                                                     target_valuenew
+                                                                                     target_valuenew_uncertainty
+  Root:nef_my_nmr_project_1:nef_chemical_shift_list_1:nef_chemical_shift: contains --> sequence_code2
+                                                                                       chain_code2
+                                                                                       residue_type2
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_dummy15d: contains --> experiment_typeclassification
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_dummy15d:nef_spectrum_dimension: contains --> absolute_peak_positions2
+                                                                                           is_acquisition2
+                                                                                           spectral_width2
+                                                                                           spectrometer_frequency2
+                                                                                           value_first_point2
+                                                                                           folding2
+  Root:nef_my_nmr_project_1:nef_distance_restraint_list_L1: contains --> restraint_origin2
+  Root:nef_my_nmr_project_1:nef_distance_restraint_list_L1:nef_distance_restraint: contains --> target_valuenew
+                                                                                                upper_linear_limitnew
+                                                                                                target_valuenew_uncertainty
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_cnoesy1: contains --> experiment_typeclassification
+
+Items that are present in both files:
+  Root:nef_my_nmr_project_1:nef_peak_restraint_links:nef_peak_restraint_link: contains -->  <Column>: restraint_list_id  <rowIndex>: 2  -->  nef_dihedral_restraint_list_L2 != nef_dihedral_restraint_list_L3
+                                                                                            <Column>: restraint_list_id  <rowIndex>: 3  -->  nef_dihedral_restraint_list_L2 != nef_dihedral_restraint_list_L3
+                                                                                            <Column>: restraint_id  <rowIndex>: 0  -->  5 != 9
+                                                                                            <Column>: restraint_id  <rowIndex>: 1  -->  8 != 9
+                                                                                            <Column>: restraint_id  <rowIndex>: 2  -->  4 != 9
+                                                                                            <Column>: restraint_id  <rowIndex>: 3  -->  4 != 9
+  Root:nef_my_nmr_project_1:nef_chemical_shift_list_1:nef_chemical_shift: contains -->  <Column>: value_uncertainty  <rowIndex>: 46  -->  0 != 0.05
+  Root:nef_my_nmr_project_1:nef_nmr_meta_data: contains -->  <Value>:  format_version  -->  0.2 != 0.255
+  Root:nef_my_nmr_project_1:nef_molecular_system:nef_sequence: contains -->  <Column>: residue_variant  <rowIndex>: 6  -->  None != GLU_LL
+  Root:nef_my_nmr_project_1:nef_molecular_system:nef_covalent_links: contains -->  <Column>: atom_name_2  <rowIndex>: 5  -->  C != H
+                                                                                   <Column>: sequence_code_2  <rowIndex>: 3  -->  15 != 16
+                                                                                   <Column>: sequence_code_2  <rowIndex>: 4  -->  27 != 28
+                                                                                   <Column>: chain_code_1  <rowIndex>: 2  -->  E != A
+                                                                                   <Column>: chain_code_1  <rowIndex>: 3  -->  E != A
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_dummy15d:nef_peak: contains -->  <Column>: residue_type_14  <rowIndex>: 0  -->  GLN != LEU
+  Root:nef_my_nmr_project_1:nef_distance_restraint_list_L1:nef_distance_restraint: contains -->  <rowLength>:  7 != 8
+                                                                                                 <Column>: residue_type_2  <rowIndex>: 4  -->  ASP != THR
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_cnoesy1:nef_peak: contains -->  <Column>: sequence_code_1  <rowIndex>: 6  -->  14 != 12
+                                                                             <Column>: sequence_code_1  <rowIndex>: 7  -->  14 != 15
+                                                                             <Column>: chain_code_1  <rowIndex>: 0  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 1  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 2  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 3  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 4  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 6  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 7  -->  A != None
+                                                                             <Column>: chain_code_1  <rowIndex>: 8  -->  A != None
+  Root:nef_my_nmr_project_1:nef_nmr_spectrum_cnoesy1:nef_spectrum_dimension_transfer: contains -->  <Column>: is_indirect  <rowIndex>: 0  -->  False != True
+                                                                                                    <Column>: is_indirect  <rowIndex>: 1  -->  False != True
