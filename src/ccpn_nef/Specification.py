@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# """Code for handling NEF specification and metadata
+"""Code for handling NEF specification and metadata
 
 """
 #=========================================================================================
