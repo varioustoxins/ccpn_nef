@@ -209,12 +209,7 @@ from math import isclose
 from cmath import isclose as cisclose
 from ast import literal_eval
 
-try:
-    # Python 3
-    from itertools import zip_longest
-except:
-    # python 2.7
-    from itertools import izip_longest as zip_longest
+from itertools import zip_longest
 
 EXCLUSIVEGROUP = ['compare', 'verify']
 CONVERTTOSTRINGS = (int, float, complex, bool, list, tuple, dict, set, frozenset, OrderedDict, type(None))
@@ -1148,7 +1143,7 @@ def verifyFile(file, options):
     :return:
     """
     import os
-    VALIDATEDICT = os.path.join(os.path.dirname(__file__), '../../NEF/specification/mmcif_nef_v1_1.dic')
+    VALIDATEDICT = os.path.join(os.path.dirname(__file__), '../../NEF_SPECIFICATION/specification/mmcif_nef_v1_1.dic')
 
     from . import NefImporter as Nef
 

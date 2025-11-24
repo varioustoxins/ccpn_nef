@@ -597,6 +597,7 @@ class NefImporter(el.ErrorLog):
 
         _path = os.path.expanduser(fileName)
         _path = os.path.normpath(_path)
+
         if not os.path.isfile(_path):
             raise RuntimeError('Nef dictionary file "%s" not found' % fileName)
 
