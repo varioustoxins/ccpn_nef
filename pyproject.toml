@@ -6,4 +6,31 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "numpy>=2.0.2",
+    "pytest>=8.4.2",
 ]
+
+license = {text = "CCPN licence"}
+authors = [
+    {name = "Ed Brooksbank"},
+    {name = "Luca Mureddu"},
+    {name = "Timothy J Ragan"},
+    {name = "Joanna Fox"},
+    {name = "Victoria A Higman"},
+    {name =  "Gary S Thompson"},
+    {name = "Eliza Płoskoń"},
+    {name = "Geerten W Vuister"}
+
+]
+maintainers = [
+    {name = "CCPN Project", email = "support@ccpn.ac.uk"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: CCPN licence",
+    "Operating System :: OS Independent",
+]
+urls = {homepage = "http://www.ccpn.ac.uk"}
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build_backend"
